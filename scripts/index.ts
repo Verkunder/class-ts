@@ -15,7 +15,7 @@ class MyClass {
     private name: string = 'Step'; // к этой переменной нельзя обратиться вне класса
     protected age: number = 23; // доступна только в классах наследниках
     static b() {
-        console.log(this.a)
+        console.log(this.a, 'Hello World!')
     }
 
     constructor(name, age) {
@@ -36,5 +36,6 @@ MyClass.b()
 const z: MyClass = new MyClass('Stepan', 23)
 
 ExampleClass.b()
+ExampleClass.log()
 
 //type полезны для объединяемых типов (например, type MyType = TypeA | TypeB); тогда как интерфейсы лучше использовать для объявления форм, а затем для их реализации или расширения
